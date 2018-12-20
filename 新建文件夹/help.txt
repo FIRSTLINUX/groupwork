@@ -1,0 +1,45 @@
+***************************************
+In this project, exercise means ./demo
+You can use the following options to complete the operation.
+**************************************
+
+Display help information
+Usage:exercise [OPTION] 
+-h,-H 	Display all parameter usage
+
+Display file/directory information
+Usage:exercise [OPTION] file/directory
+-q,-Q	Display the attributes of the object (1. File or directory 2. Operational attributes of the object 3. Size of the object 4. Last access time, etc.)
+
+Display file contents
+Usage:exercise [OPTION] ( [OPTION11] [OPTION 2] ) file
+-r,-R ( -o -l )	List the specific contents of the file. The object must be the file. You can specify offset and length to specify the read range.offset and length can't have only one.
+
+Create a file or directory
+Usage1:exercise [OPTION 1] [OPTION 2] file mode
+-c,-C	Create a file/directory
+-f,-F	Create a file
+Usage2:exercise [OPTION 1] directory mode
+Create directories by default without -f
+When mode exists, it is created with the attribute of mode, when mode does not exist, it is created with the default attribute, and when a file or directory exists, it is overwritten by force.
+
+Delete files or directory
+Usage:exercise [OPTION] file/directory
+-d,-D	Delete the specified file or directory
+
+Copy files and their attributes
+Usage:exercise [OPTION] source destination
+-p,-P	Copy directories recursively
+
+Create soft links for files or directories
+Usage:exercise [OPTION] sourcc distination
+-s,-S	Make symbolic links instead of hard links
+
+Display file details under the directory
+Usage:exercide [OPTION]
+-L 	Displays file details under the specified directory, while the current directory is displayed without the specified directory
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems
+
